@@ -1,0 +1,467 @@
+/* ===================================
+   ESTILOS GERAIS DO BLOG
+   =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* ===================================
+   HEADER E NAVEGAÇÃO
+   =================================== */
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+}
+
+/* ===================================
+   CONTAINER PRINCIPAL
+   =================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main {
+    padding: 2rem 0;
+    min-height: calc(100vh - 200px);
+}
+
+/* ===================================
+   LISTAGEM DE POSTS (HOME)
+   =================================== */
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.post-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.post-card-header {
+    padding: 1.5rem;
+    border-bottom: 2px solid #667eea;
+}
+
+.post-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.post-meta {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.post-meta span {
+    margin-right: 1rem;
+}
+
+.post-card-body {
+    padding: 1.5rem;
+}
+
+.post-excerpt {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.post-card footer {
+    padding: 1rem 1.5rem;
+    background: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #764ba2;
+}
+
+.btn-secondary {
+    background: #999;
+}
+
+.btn-secondary:hover {
+    background: #777;
+}
+
+.btn-danger {
+    background: #e74c3c;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+}
+
+.btn-success {
+    background: #27ae60;
+}
+
+.btn-success:hover {
+    background: #229954;
+}
+
+/* ===================================
+   PÁGINA DE POST INDIVIDUAL
+   =================================== */
+
+.post-single {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.post-single h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.post-single-meta {
+    color: #999;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.post-single-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* ===================================
+   COMENTÁRIOS
+   =================================== */
+
+.comments-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #eee;
+}
+
+.comments-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.comment {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #667eea;
+}
+
+.comment-author {
+    font-weight: 600;
+    color: #333;
+}
+
+.comment-date {
+    font-size: 0.85rem;
+    color: #999;
+    margin-left: 1rem;
+}
+
+.comment-text {
+    margin-top: 0.5rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ===================================
+   FORMULÁRIOS
+   =================================== */
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* ===================================
+   PAINEL ADMINISTRATIVO
+   =================================== */
+
+.admin-header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.admin-header h2 {
+    margin-bottom: 0.5rem;
+}
+
+.posts-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.posts-table thead {
+    background: #667eea;
+    color: white;
+}
+
+.posts-table th,
+.posts-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.posts-table tbody tr:hover {
+    background: #f9f9f9;
+}
+
+.posts-table .actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.posts-table .actions a,
+.posts-table .actions button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+}
+
+/* ===================================
+   ALERTAS E MENSAGENS
+   =================================== */
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    border-left: 4px solid;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border-color: #28a745;
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.alert-info {
+    background: #d1ecf1;
+    color: #0c5460;
+    border-color: #bee5eb;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* ===================================
+   RESPONSIVIDADE
+   =================================== */
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-single {
+        padding: 1rem;
+    }
+
+    .post-single h1 {
+        font-size: 1.5rem;
+    }
+
+    .posts-table {
+        font-size: 0.9rem;
+    }
+
+    .posts-table th,
+    .posts-table td {
+        padding: 0.75rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .posts-grid {
+        gap: 1rem;
+    }
+
+    .post-card-header {
+        padding: 1rem;
+    }
+
+    .post-single h1 {
+        font-size: 1.2rem;
+    }
+}
